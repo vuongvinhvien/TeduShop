@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace TeduShop.Model.Asbtract
+namespace TeduShop.Model.Abstract
 {
     public abstract class Auditable : IAuditable
     {
