@@ -5,24 +5,22 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace TeduShop.Model.Models
 {
-    [Table("Slides")]
-    class Slide
+    [Table("SystemConfigs")]
+    public class SystemConfig
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
-        [MaxLength(256)]
         [Required]
-        public string Name { set; get; }
-        [MaxLength(256)]
-        public string Image { set; get; }
-        [MaxLength(256)]
-        public string Url { set; get; }
-        public int? DisplayOrder { set; get; }
-        public bool Status { set; get; }
+        [MaxLength(50)]
+        [Column(TypeName ="varchar")]
+        public string Code { set; get; }
+        [MaxLength(50)]
+        public string ValueString { set; get; }
+       
+        public int? ValueInt { set; get; }        
     }
 }
