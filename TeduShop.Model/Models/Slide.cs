@@ -10,7 +10,7 @@ using System.Xml.Linq;
 namespace TeduShop.Model.Models
 {
     [Table("Slides")]
-    class Slide
+    public class Slide
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
