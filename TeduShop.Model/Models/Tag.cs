@@ -8,15 +8,18 @@ namespace TeduShop.Model.Models
     public class Tag
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [MaxLength(50)]
-        public int ID { set; get; }
+        [MaxLength(50)] 
+        [Column(TypeName ="varchar")]       
+        public string ID { set; get; }
 
         [Required]
+        [MaxLength(50)]
         public string Name { set; get; }
 
+        [MaxLength(50)]
+        [Required]
         public string Type { set; get; }
 
-        public IEnumerable<PostTag> PostTag { set; get; }
+        
     }
 }
